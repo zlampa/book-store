@@ -1,0 +1,4 @@
+{
+    "liveSassCompile.settings.savePath": "/dist/css",
+    "liveSassCompile.settings.format": "compressed"
+}

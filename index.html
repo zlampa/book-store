@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Book Store</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__dot">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+        </div>
+        <div class="header__logo">
+            <span>
+                <i class="fa fa-book"></i>
+                MyBookApp
+            </span>
+        </div>
+        <nav class="header__nav">
+            <li>
+                <a href="#">Help Center</a>
+            </li>
+            <span class="small-dot">&#8226</span>
+            <li>
+                <a href="#">Our Support</a>
+            </li>
+            <li class="user">
+                <a class="user__name" href="#">
+                   <img src="src/img/avatar-01.png">
+                    John Doe
+                </a>
+                <i class="fa fa-chevron-circle-down"></i>
+            </li>
+        </nav>
+    </header>
+    <main class="page">
+        <div class="main" >
+            <section class="main__add">
+            <a href="#" class="main__add__button">
+                <i class="fa fa-plus"></i>
+                Add a Book
+            </a>
+            </section>
+            <div class="main__separator"></div>
+            <nav class="main__nav">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-book"></i>
+                        Now Reading
+                    </a>
+                </li>
+                <li class="main__nav--selected">
+                    <a href="#">
+                        <i class="fa fa-globe"></i>
+                        Browse
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>
+                        Buy Books
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-star"></i>
+                        Favourite Books
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-th-list"></i>
+                        Wishlist
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-clock-o"></i>
+                        History
+                    </a>
+                </li>
+            </nav>
+            <div class="main__separator"></div>
+            <nav class="main__board">
+                <li>
+                    <span class="main__board__dot red"></span>
+                    <a href="#">Must Read Titles</a>
+                </li>
+                <li>
+                    <span class="main__board__dot yellow"></span>
+                    <a href="#">Best Of List</a>
+                </li>
+                <li>
+                    <span class="main__board__dot green"></span>
+                    <a href="#">Classic Novels</a>
+                </li>
+                <li>
+                    <span class="main__board__dot purple"></span>
+                    <a href="#">Non Fiction</a>
+                </li>
+            </nav>
+            <div class="main__separator"></div>
+            <div class="main__actions">
+
+            </div>
+        </div>
+        <div class="content">
+            <header class="content__header">
+                Browse Available Books
+            </header>
+            <nav class="content__nav">
+                <li class="content__nav--selected">
+                    <a href="#">All Books</a>
+                </li>
+                <li>
+                    <a href="#">Most Recent</a>
+                </li>
+                <li>
+                    <a href="#">Most Popular</a>
+                </li>
+                <li>
+                    <a href="#">Free Books</a>
+                </li> 
+                <div class="content__nav__search">      
+                    <input type="search"placeholder="Enter Keywords">
+                    <i class="fa fa-search"></i>
+                </div>
+            </nav>
+        </div>
+        
+    </main>
+    
+</body>
+</html>
