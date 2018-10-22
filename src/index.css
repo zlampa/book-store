@@ -266,6 +266,29 @@
   width: 200px;
 }
 
+.main .main__actions .main__actions__post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .main__actions .main__actions__post i {
+  margin: 37px 0 0 15px;
+  color: #78829d;
+}
+
+.main .main__actions .main__actions__post .post-text {
+  margin: 37px 0 0 11px;
+  font-size: 12px;
+  font-family: Montserrat;
+  color: #78829d;
+  line-height: 1.5;
+}
+
+.main .main__actions .main__actions__post .lighter {
+  color: #97b3ce;
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,9 +314,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
   font-size: 12px;
   font-family: Montserrat;
   background-color: #eef1f7;

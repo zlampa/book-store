@@ -194,6 +194,23 @@ $gray-color: #78829d;
         background-color: #1f2637;
         height: 347px;
         width: 200px;
+        .main__actions__post {
+            display: flex;
+            i {
+                margin: 37px 0 0 15px;
+                color: $gray-color;
+            }
+            .post-text {
+                margin: 37px 0 0 11px;
+                font-size: 12px;
+                font-family: Montserrat;
+                color: $gray-color;
+                line-height: 1.5;
+            }
+            .lighter {
+                color: #97b3ce;
+            }
+        }
     }
 }
 .content {
@@ -211,7 +228,7 @@ $gray-color: #78829d;
     }
     .content__nav {
         display: flex;
-        justify-content: stretch;
+        //justify-content: stretch;
         font-size: 12px;
         font-family: Montserrat;
         background-color: #eef1f7;
