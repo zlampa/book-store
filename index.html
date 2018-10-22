@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="src/index.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Guntur" rel="stylesheet">
     <title>Book Store</title>
 </head>
 <body>
@@ -30,13 +31,13 @@
             <li>
                 <a href="#">Our Support</a>
             </li>
-            <li class="user">
+            <div class="user">
+                <img src="src/img/avatar-01.png">
                 <a class="user__name" href="#">
-                   <img src="src/img/avatar-01.png">
                     John Doe
                 </a>
                 <i class="fa fa-chevron-circle-down"></i>
-            </li>
+            </div>
         </nav>
     </header>
     <main class="page">
@@ -113,10 +114,18 @@
                      by <span class="lighter">Chuck Palahniuk </span>
                     to your <span class="lighter">Must Read Titles</span>.</span>
                 </div>
-                <div >
-                    24 minutes ago
+                <div class="main__actions__post">
+                    <span class="post-date">24 minutes ago</span>
                 </div>
-                
+                <div class="main__actions__post">
+                    <i class="fa fa-clock-o"></i>
+                    <span class="post-text">You added <span class="lighter">The Trial</span>
+                     by <br> <span class="lighter">Franz Kafka </span>
+                    to your <span class="lighter">Must <br> Read Titles</span>.</span>
+                </div>
+                <div class="main__actions__post">
+                    <span class="post-date">48 minutes ago</span>
+                </div> 
             </div>
         </div>
         <div class="content">
@@ -141,9 +150,109 @@
                     <i class="fa fa-search"></i>
                 </div>
             </nav>
+            <section class="content__books">
+                <div class="content__books__item">
+                    <img src="src/img/book-cover-1.png">
+                    <p class="title">Jewels of Nizam</p>
+                    <p class="author">by Geeta Devi</p>
+                    <div class="stars-outer">
+                        <div class="stars-inner five">
+                        </div>
+                    </div>
+                </div>
+                <div class="content__books__item">
+                    <img src="src/img/book-cover-2.png">
+                    <p class="title">Cakes & Bakes</p>
+                    <p class="author">by Sanjeev Kapoor</p>
+                    <div class="stars-outer">
+                        <div class="stars-inner five">
+                        </div>
+                    </div>
+                </div>
+                <div class="content__books__item">
+                    <img src="src/img/book-cover-3.png">
+                    <p class="title">Jamie’s Kitchen</p>
+                    <p class="author">by Jamie Oliver</p>
+                    <div class="stars-outer">
+                        <div class="stars-inner four-half">
+                        </div>
+                    </div>
+                </div>
+                <div class="content__books__item">
+                    <img src="src/img/book-cover-4.png">
+                    <p class="title">Inexpensive Family Meals</p>
+                    <p class="author">by Simon Holst</p>
+                    <div class="stars-outer">
+                        <div class="stars-inner four">
+                        </div>
+                    </div>
+                </div>
+                <div class="content__books__item">
+                    <img src="src/img/book-cover-5.png">
+                    <p class="title">Paleo Slow Cooking</p>
+                    <p class="author">by Chrissy Gower</p>
+                    <div class="stars-outer">
+                        <div class="stars-inner four-half">
+                        </div>
+                    </div>
+                </div>
+                <!--
+                   </section>
+            <section class="content__books"> 
+                -->
+                <div class="content__books__item">
+                    <img src="src/img/book-cover-6.png">
+                    <p class="title">Cook Like an Italian</p>
+                    <p class="author">by Tobie Puttock</p>
+                    <div class="stars-outer">
+                        <div class="stars-inner four">
+                        </div>
+                    </div>
+                </div>
+                <div class="content__books__item">
+                    <img src="src/img/book-cover-7.png">
+                    <p class="title">Suneeta Vaswani</p>
+                    <p class="author">by Geeta Devi</p>
+                    <div class="stars-outer">
+                        <div class="stars-inner five">
+                        </div>
+                    </div>
+                </div>
+                <div class="content__books__item">
+                    <img src="src/img/book-cover-8.png">
+                    <p class="title">Jamie Does</p>
+                    <p class="author">by Jamie Oliver</p>
+                    <div class="stars-outer">
+                        <div class="stars-inner four">
+                        </div>
+                    </div>
+                </div>
+                <div class="content__books__item">
+                    <img src="src/img/book-cover-9.png">
+                    <p class="title">Jamie’s italy</p>
+                    <p class="author">by Jamie Oliver</p>
+                    <div class="stars-outer">
+                        <div class="stars-inner five">
+                        </div>
+                    </div>
+                </div>
+                <div class="content__books__item">
+                    <img src="src/img/book-cover-10.png">
+                    <p class="title">Vegetables Cookbook</p>
+                    <p class="author">by Matthew Biggs</p>
+                    <div class="stars-outer">
+                        <div class="stars-inner three-half">
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         
     </main>
+    <footer class="footer">
+            <i class="fa fa-question-circle"></i>
+            <i class="fa fa-cog"></i>
+    </footer>
     
 </body>
 </html>
