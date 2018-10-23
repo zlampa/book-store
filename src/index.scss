@@ -1,6 +1,17 @@
 $gray-color: #78829d;
 $base-font: "Hind Guntur";
 
+@mixin left-menu ($background-color, $height) {
+    display: flex;
+    flex-direction: column;;
+    background-color: $background-color;
+    height: $height;
+    width: 200px;
+    @media screen and (max-width: 450px) {
+        width: 150px;
+    }
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -18,8 +29,6 @@ $base-font: "Hind Guntur";
         }
     }
     .header__logo {
-        //align-items: center;
-        //margin: 12.5px;
         i {
             font-family: FontAwesome;
             font-size: 13px;
@@ -29,7 +38,6 @@ $base-font: "Hind Guntur";
             font-family: $base-font;
             font-size: 12px;
             color: $gray-color;
-            padding-left: 150px;
         }
     }
     .header__nav {
@@ -41,22 +49,28 @@ $base-font: "Hind Guntur";
             text-decoration: none;
             color: $gray-color;
             font-family: $base-font;
-            
             font-size: 13px;
         }
         li {
             display: inline;
+            @media screen and (max-width: 550px) {
+                display: none;
+            }
             margin: 16px 12px 10px 0;
         }
         .small-dot {
             color: #19202e; 
             margin-right: 10px;
             margin-top: 10px;
+            @media screen and (max-width: 550px) {
+                display: none;
+            }
         }
         .user {
             display: inline-block;
             background-color: #15a4fa;
             margin-right: 0;
+            padding: 1px;
             img {
                 border-radius: 50%;
                 border: solid 2px #fff;
@@ -64,25 +78,30 @@ $base-font: "Hind Guntur";
                 height: 30px;
                 width: 29px;
                 vertical-align: bottom;
-                margin: 6px 8px 7px 12px;
+                margin: 5px 0 5px 12px;
+                @media screen and (max-width: 520px) {
+                    display: none;
+                }
             }
             .user__name {
                 color: #fff;
-                margin-bottom: 2px;
                 vertical-align: text-bottom;
                 font-size: 13px;
                 font-weight: normal;
+                margin-left: 8px;
                 
             }
             .fa-chevron-circle-down {
                 color: #fff;
-                padding: 20px 20px 15px 10px;
+                padding: 17px 20px 15px 15px;
                 font-size: 13px;
+                @media screen and (max-width: 520px) {
+                    padding: 15px 5px;
+                }
             }
         }
     }
 }
-
 
 .page {
     display: flex;
@@ -92,12 +111,8 @@ $base-font: "Hind Guntur";
     display: flex;
     flex-direction: column;
     .main__add {
-        display: flex;
-        flex-direction: column;
+        @include left-menu(#1f2637, 114px);
         justify-content: center;
-        background-color: #1f2637;
-        height: 114px;
-        width: 200px;
         i {
             color: #fff;
             width: 13px;
@@ -114,32 +129,28 @@ $base-font: "Hind Guntur";
             font-weight: bold;
             border-radius: 4px;
             height: 20px;
-            margin: 35px 20px 41px 20px;
-            padding: 12px 25px 12px 20px;
+            margin: 35px 20px 35px 20px;
+            padding: 12px 5px 12px 20px;
+            @media screen and (max-width: 450px) {
+                margin: 10px;
+                padding: 5px;
+            }
             text-transform: uppercase;
         }
     }
     .main__separator {
-        display: flex;
-        flex-direction: column;
-        height: 4px;
-        width: 200px;
-        background-color: #181e2c;
+        @include left-menu(#181e2c, 4px);
         left: 0;
         border-top: 1px solid #141824;
         border-bottom: 1px solid #262f41;
 
     }
     .main__nav {
-        display: flex;
-        flex-direction: column;
+        @include left-menu(#1f2637, 240px);
         justify-content: flex-start;
-        background-color: #1f2637;
-        height: 240px;
-        width: 200px;
         li {
             list-style-type: none;
-            padding: 10px 10px 10px 20px;
+            padding: 10px 10px 9px 20px;
         }
         a {
             text-decoration: none;
@@ -148,7 +159,8 @@ $base-font: "Hind Guntur";
             font-size: 13px;
         }
         i {
-            padding-right: 7px;
+            padding-right: 8px;
+            font-size: 14px;
         }
         .main__nav--selected {
             background-color: #15a4fa;
@@ -158,15 +170,10 @@ $base-font: "Hind Guntur";
         }
     }
     .main__board {
-        display: flex;
-        flex-direction: column;
-        //justify-content: flex-start;
-        background-color: #1f2637;
-        height: 186px;
-        width: 200px;
+        @include left-menu(#1f2637, 181px);
         li {
             list-style-type: none;
-            margin: 11px 20px;
+            margin: 11px 0 11px 25px;
             .main__board__dot {
                 content: '';
                 display: inline-block;
@@ -176,7 +183,6 @@ $base-font: "Hind Guntur";
                 margin-right: 10px;
             }
             &:first-child {
-                margin-left: 20px;
                 margin-top: 20px;
             }
         }
@@ -188,20 +194,17 @@ $base-font: "Hind Guntur";
         }
     }
     .main__actions {
-        display: flex;
-        flex-direction: column;
         justify-content: flex-start;
-        background-color: #1f2637;
-        height: 347px;
-        width: 200px;
+        @include left-menu(#1f2637, 347px);
         .main__actions__post {
             display: flex;
             i {
-                margin: 37px 0 0 15px;
+                margin: 37px 0px 0 20px;
                 color: $gray-color;
+                font-size: 16px;
             }
             .post-text {
-                margin: 37px 0 0 11px;
+                margin: 37px 15px 0 12px;
                 font-size: 12px;
                 font-family: $base-font;
                 color: $gray-color;
@@ -219,6 +222,7 @@ $base-font: "Hind Guntur";
         }
     }
 }
+
 .content {
     display: flex;
     flex-direction: column;
@@ -229,12 +233,14 @@ $base-font: "Hind Guntur";
         background-color: #eef1f7;
         font-size: 22px;
         padding: 26px 0 29px 23px;
+        @media screen and (max-width: 450px) {
+            padding: 10px 10px 40px 10px;
+        }
         font-family: $base-font;
         border-bottom: 1px solid #dadfea;
     }
     .content__nav {
         display: inline-block;
-        //justify-content: stretch;
         font-size: 12px;
         font-family: $base-font;
         background-color: #eef1f7;
@@ -251,15 +257,12 @@ $base-font: "Hind Guntur";
             padding: 5px 10px 3px 10px;
             align-self: center;
             margin: 10px;
-            ////////
             float: left;
             display: block;
             text-align: center;
-            ///////////
             &:first-child {
                 margin-left: 20px;
-            }  
-            
+            }    
         }
         .content__nav--selected {
             background-color: #97b3ce;
@@ -269,16 +272,17 @@ $base-font: "Hind Guntur";
             }
         }
         .content__nav__search {
-            //display: flex;
             position: relative;
             float: right;
             padding-right: 20px;
-            
             input {
                 margin: 8px 0 7px 0;
                 min-width: 400px;
                 @media screen and (max-width: 650px) {
                     min-width: 200px; 
+                }
+                @media screen and (max-width: 450px) {
+                    min-width: 150px; 
                 }
                 height: 32px;
                 padding-left: 10px;
@@ -291,6 +295,9 @@ $base-font: "Hind Guntur";
                 left: 375px;
                 @media screen and (max-width: 650px) {
                     left: 175px; 
+                }
+                @media screen and (max-width: 450px) {
+                    left: 150px; 
                 }
                 color: #8c97b2;
                 font-size: 14px;
@@ -305,9 +312,11 @@ $base-font: "Hind Guntur";
         flex-direction: row;
         max-height: 779px;
         @media screen and (max-width: 1050px) {
-            max-height: 740px;     
+            max-height: 718px;     
         }
-
+        @media screen and (max-width: 540px) {
+            max-height: 685px;     
+        }
         float:left;
         width:100%;
         overflow: auto;
@@ -315,28 +324,34 @@ $base-font: "Hind Guntur";
             display: flex;
             flex-direction: column;
             margin: auto;
+            @media screen and (max-width: 450px) {
+                padding: 10px 10px 40px 10px;
+                margin-left: -15px;
+                margin-top: -25px;
+            }
             img {
                 margin: 29px 0px 17px 20px;
                 border-radius: 4px;
             }
             .title {
-                margin: 0 0 11px 20px;
+                margin: 0 0 6px 20px;
                 font-size: 16px;
                 color: #444c63;
             }
             .author {
-                font-size: 11px;
-                margin: 0 0 11px 20px;
+                font-size: 12px;
+                margin: 0 0 6px 20px;
                 color: #6f7d95;
             }
             .stars-outer {
                 display: inline-block;
                 position: relative;
                 font-family: FontAwesome;
+                font-size: 14px;
                 color: #ffab00;
                 &:before {
                     content: "\f006 \f006 \f006 \f006 \f006";
-                    margin: 0 0 12px 20px;
+                    margin-left: 20px;
                 }
             }
             .stars-inner {
@@ -350,7 +365,7 @@ $base-font: "Hind Guntur";
                 color: #ffab00;
                 &:before {
                     content: "\f005 \f005 \f005 \f005 \f005";
-                    margin: 0 0 12px 20px;
+                    margin-left: 20px;
                     color: #ffab00;
                 }
             }
@@ -369,8 +384,8 @@ $base-font: "Hind Guntur";
         }
     }
 }
+
 .footer {
-    //position: fixed;
     display: flex;
     justify-content: flex-end;
     height: 45px;

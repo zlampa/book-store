@@ -34,7 +34,6 @@
   font-family: "Hind Guntur";
   font-size: 12px;
   color: #78829d;
-  padding-left: 150px;
 }
 
 .header .header__nav {
@@ -61,16 +60,29 @@
   margin: 16px 12px 10px 0;
 }
 
+@media screen and (max-width: 550px) {
+  .header .header__nav li {
+    display: none;
+  }
+}
+
 .header .header__nav .small-dot {
   color: #19202e;
   margin-right: 10px;
   margin-top: 10px;
 }
 
+@media screen and (max-width: 550px) {
+  .header .header__nav .small-dot {
+    display: none;
+  }
+}
+
 .header .header__nav .user {
   display: inline-block;
   background-color: #15a4fa;
   margin-right: 0;
+  padding: 1px;
 }
 
 .header .header__nav .user img {
@@ -80,21 +92,33 @@
   height: 30px;
   width: 29px;
   vertical-align: bottom;
-  margin: 6px 8px 7px 12px;
+  margin: 5px 0 5px 12px;
+}
+
+@media screen and (max-width: 520px) {
+  .header .header__nav .user img {
+    display: none;
+  }
 }
 
 .header .header__nav .user .user__name {
   color: #fff;
-  margin-bottom: 2px;
   vertical-align: text-bottom;
   font-size: 13px;
   font-weight: normal;
+  margin-left: 8px;
 }
 
 .header .header__nav .user .fa-chevron-circle-down {
   color: #fff;
-  padding: 20px 20px 15px 10px;
+  padding: 17px 20px 15px 15px;
   font-size: 13px;
+}
+
+@media screen and (max-width: 520px) {
+  .header .header__nav .user .fa-chevron-circle-down {
+    padding: 15px 5px;
+  }
 }
 
 .page {
@@ -121,12 +145,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: #1f2637;
   height: 114px;
   width: 200px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 450px) {
+  .main .main__add {
+    width: 150px;
+  }
 }
 
 .main .main__add i {
@@ -146,9 +176,16 @@
   font-weight: bold;
   border-radius: 4px;
   height: 20px;
-  margin: 35px 20px 41px 20px;
-  padding: 12px 25px 12px 20px;
+  margin: 35px 20px 35px 20px;
+  padding: 12px 5px 12px 20px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 450px) {
+  .main .main__add a {
+    margin: 10px;
+    padding: 5px;
+  }
 }
 
 .main .main__separator {
@@ -159,12 +196,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #181e2c;
   height: 4px;
   width: 200px;
-  background-color: #181e2c;
   left: 0;
   border-top: 1px solid #141824;
   border-bottom: 1px solid #262f41;
+}
+
+@media screen and (max-width: 450px) {
+  .main .main__separator {
+    width: 150px;
+  }
 }
 
 .main .main__nav {
@@ -175,17 +218,23 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   background-color: #1f2637;
   height: 240px;
   width: 200px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media screen and (max-width: 450px) {
+  .main .main__nav {
+    width: 150px;
+  }
 }
 
 .main .main__nav li {
   list-style-type: none;
-  padding: 10px 10px 10px 20px;
+  padding: 10px 10px 9px 20px;
 }
 
 .main .main__nav a {
@@ -196,7 +245,8 @@
 }
 
 .main .main__nav i {
-  padding-right: 7px;
+  padding-right: 8px;
+  font-size: 14px;
 }
 
 .main .main__nav .main__nav--selected {
@@ -216,13 +266,19 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #1f2637;
-  height: 186px;
+  height: 181px;
   width: 200px;
+}
+
+@media screen and (max-width: 450px) {
+  .main .main__board {
+    width: 150px;
+  }
 }
 
 .main .main__board li {
   list-style-type: none;
-  margin: 11px 20px;
+  margin: 11px 0 11px 25px;
 }
 
 .main .main__board li .main__board__dot {
@@ -235,7 +291,6 @@
 }
 
 .main .main__board li:first-child {
-  margin-left: 20px;
   margin-top: 20px;
 }
 
@@ -247,6 +302,9 @@
 }
 
 .main .main__actions {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,12 +312,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   background-color: #1f2637;
   height: 347px;
   width: 200px;
+}
+
+@media screen and (max-width: 450px) {
+  .main .main__actions {
+    width: 150px;
+  }
 }
 
 .main .main__actions .main__actions__post {
@@ -269,12 +330,13 @@
 }
 
 .main .main__actions .main__actions__post i {
-  margin: 37px 0 0 15px;
+  margin: 37px 0px 0 20px;
   color: #78829d;
+  font-size: 16px;
 }
 
 .main .main__actions .main__actions__post .post-text {
-  margin: 37px 0 0 11px;
+  margin: 37px 15px 0 12px;
   font-size: 12px;
   font-family: "Hind Guntur";
   color: #78829d;
@@ -311,6 +373,12 @@
   padding: 26px 0 29px 23px;
   font-family: "Hind Guntur";
   border-bottom: 1px solid #dadfea;
+}
+
+@media screen and (max-width: 450px) {
+  .content .content__header {
+    padding: 10px 10px 40px 10px;
+  }
 }
 
 .content .content__nav {
@@ -373,6 +441,12 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .content .content__nav .content__nav__search input {
+    min-width: 150px;
+  }
+}
+
 .content .content__nav .content__nav__search .fa-search {
   position: absolute;
   top: 16px;
@@ -384,6 +458,12 @@
 @media screen and (max-width: 650px) {
   .content .content__nav .content__nav__search .fa-search {
     left: 175px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .content .content__nav .content__nav__search .fa-search {
+    left: 150px;
   }
 }
 
@@ -409,7 +489,13 @@
 
 @media screen and (max-width: 1050px) {
   .content .content__books {
-    max-height: 740px;
+    max-height: 718px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .content .content__books {
+    max-height: 685px;
   }
 }
 
@@ -424,20 +510,28 @@
   margin: auto;
 }
 
+@media screen and (max-width: 450px) {
+  .content .content__books .content__books__item {
+    padding: 10px 10px 40px 10px;
+    margin-left: -15px;
+    margin-top: -25px;
+  }
+}
+
 .content .content__books .content__books__item img {
   margin: 29px 0px 17px 20px;
   border-radius: 4px;
 }
 
 .content .content__books .content__books__item .title {
-  margin: 0 0 11px 20px;
+  margin: 0 0 6px 20px;
   font-size: 16px;
   color: #444c63;
 }
 
 .content .content__books .content__books__item .author {
-  font-size: 11px;
-  margin: 0 0 11px 20px;
+  font-size: 12px;
+  margin: 0 0 6px 20px;
   color: #6f7d95;
 }
 
@@ -445,12 +539,13 @@
   display: inline-block;
   position: relative;
   font-family: FontAwesome;
+  font-size: 14px;
   color: #ffab00;
 }
 
 .content .content__books .content__books__item .stars-outer:before {
   content: "\f006 \f006 \f006 \f006 \f006";
-  margin: 0 0 12px 20px;
+  margin-left: 20px;
 }
 
 .content .content__books .content__books__item .stars-inner {
@@ -466,7 +561,7 @@
 
 .content .content__books .content__books__item .stars-inner:before {
   content: "\f005 \f005 \f005 \f005 \f005";
-  margin: 0 0 12px 20px;
+  margin-left: 20px;
   color: #ffab00;
 }
 
